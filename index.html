@@ -6,7 +6,28 @@
   <title>J Collins | Academic Profile</title>
   <meta name="description" content="Academic profile of J Collins — Agricultural Systems, Soil Health, Sustainability, and Modelling." />
 
+  
   <style>
+        .profile{
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .avatar{
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    @media (max-width: 520px){
+      .profile{ grid-template-columns: 1fr; }
+      .avatar{ width: 110px; height: 110px; }
+    }
+
     :root{
       --bg: #ffffff;
       --text: #121212;
@@ -122,21 +143,25 @@
   </style>
 </head>
 
-<body>
-  <div class="wrap">
-    <header>
-      <h1>J Collins</h1>
-      <p class="tagline">Agricultural Systems • Soil Health • Sustainability • Modelling</p>
+  <header>
+    <div class="profile">
+      <img class="avatar" src="assets/J Collins Headshot.jpg" alt="Photo of J Collins" />
+      <div>
+        <h1>J Collins</h1>
+        <p class="tagline">Agricultural Systems • Soil Health • Sustainability • Modelling</p>
 
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#phd">PhD</a>
-        <a href="#research">Research</a>
-        <a href="#methods">Methods</a>
-        <a href="#outputs">Outputs</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#phd">PhD</a>
+          <a href="#research">Research</a>
+          <a href="#methods">Methods</a>
+          <a href="#outputs">Outputs</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
 
     <section id="about">
       <h2>About</h2>
@@ -261,7 +286,7 @@
       <h2>Contact</h2>
       <div class="card">
         <ul>
-          <li>Email: <a href="mailto:jcollins@harper-adams.ac.uk">YOUR.EMAIL@EXAMPLE.COM</a></li>
+          <li>Email: <a href="mailto:jcollins@harper-adams.ac.uk">jcollins@harper-adams.ac.uk</a></li>
           <li>GitHub: <a href="https://github.com/jwollins">github.com/jwollins</a></li>
           <li>Domain: jcollinsagriculture.co.uk</li>
         </ul>
