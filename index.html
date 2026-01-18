@@ -1,81 +1,160 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>J Collins – Agricultural Research</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J Collins | Academic Profile</title>
   <style>
-    body {
-      font-family: Arial;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-    }
-
-    header {
-      border-bottom: 2px solid #2c5f2d;
-    }
-
-    h1, h2 {
-      color: #2c5f2d;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-    .nav a {
-      margin-right: 15px;
-    }
+    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; max-width: 920px; margin: 0 auto; padding: 24px; line-height: 1.65; }
+    header { padding: 10px 0 18px; border-bottom: 2px solid #2c5f2d; }
+    h1 { margin: 0; }
+    .subtitle { margin: 6px 0 0; }
+    nav { margin-top: 10px; }
+    nav a { margin-right: 14px; text-decoration: none; }
+    section { padding-top: 28px; }
+    .card { background: #f7f7f7; padding: 16px; border-radius: 12px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+    footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 0.95em; }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>J Collins</h1>
+    <p class="subtitle">Agricultural Systems • Soil Health • Sustainability • Modelling</p>
 
-<header>
-  <h1>J Collins</h1>
-  <p>Agricultural Systems Research • Soil • Sustainability</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#phd">PhD</a>
+      <a href="#research">Research</a>
+      <a href="#methods">Methods</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <div class="nav">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</header>
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am an agricultural researcher focused on how farming systems can deliver productive, profitable,
+      and environmentally sustainable outcomes. My work takes a systems-level approach to evaluate
+      Conservation Agriculture in the UK, integrating soil science, agronomy, environmental assessment,
+      and data analytics.
+    </p>
+    <p>
+      I combine field experimentation with quantitative modelling to explore how management practices
+      influence soil health, greenhouse gas emissions, crop performance, and long-term resilience.
+    </p>
+  </section>
 
-<div id="about" class="section">
-  <h2>About</h2>
-  <p>
-  I am a researcher focused on sustainable agriculture,
-  soil management, and systems-level evaluation of farming practices.
-  </p>
-</div>
+  <section id="phd">
+    <h2>PhD Project</h2>
+    <div class="card">
+      <h3 style="margin-top:0;">A Systems-level Evaluation of Conservation Agriculture in the UK</h3>
+      <p>
+        My doctoral research investigates the performance of Conservation Agriculture compared with
+        conventional arable management across agronomic, environmental, and economic dimensions.
+      </p>
+      <ul>
+        <li>How do reduced tillage and residue retention affect soil physical, chemical, and biological properties?</li>
+        <li>What are the implications for greenhouse gas fluxes and carbon storage?</li>
+        <li>Can proximal soil sensing reliably predict spatial variability in soil texture and condition?</li>
+        <li>How do these practices influence farm profitability and risk under variable climate conditions?</li>
+      </ul>
+    </div>
+  </section>
 
-<div id="research" class="section">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Conservation Agriculture</li>
-    <li>Soil health and structure</li>
-    <li>Greenhouse gas fluxes</li>
-    <li>Data science in agriculture (R & Python)</li>
-  </ul>
-</div>
+  <section id="research">
+    <h2>Research Themes</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 style="margin-top:0;">Soil Health & Function</h3>
+        <ul>
+          <li>Soil structure & penetration resistance</li>
+          <li>Microarthropod communities & biodiversity indicators</li>
+          <li>Soil organic matter dynamics</li>
+          <li>Management impacts on soil resilience</li>
+        </ul>
+      </div>
 
-<div id="projects" class="section">
-  <h2>Projects</h2>
-  <ul>
-    <li>Systems evaluation of UK Conservation Agriculture</li>
-    <li>Soil scanning & machine learning</li>
-    <li>Life cycle assessment of arable systems</li>
-  </ul>
-</div>
+      <div class="card">
+        <h3 style="margin-top:0;">Digital Soil Assessment</h3>
+        <ul>
+          <li>EC and gamma-ray spectrometry (GRS) scanning</li>
+          <li>Spatial modelling and kriging</li>
+          <li>Random Forest soil texture prediction</li>
+          <li>Validation against ground truth data</li>
+        </ul>
+      </div>
 
-<div id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: your.email@institution</p>
-  <p>GitHub: github.com/jwollins</p>
-</div>
+      <div class="card">
+        <h3 style="margin-top:0;">Environmental Assessment</h3>
+        <ul>
+          <li>Greenhouse gas flux measurement and interpretation</li>
+          <li>Life Cycle Assessment of arable systems</li>
+          <li>Ecotoxicity risk from pesticide use</li>
+          <li>Systems thinking in sustainable intensification</li>
+        </ul>
+      </div>
 
+      <div class="card">
+        <h3 style="margin-top:0;">Modelling & Simulation</h3>
+        <ul>
+          <li>DSSAT crop modelling</li>
+          <li>Economic scenario analysis</li>
+          <li>Uncertainty and climate-shock simulations</li>
+          <li>Integrating biophysical + economic evidence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="methods">
+    <h2>Methods & Tools</h2>
+    <p>My work is strongly quantitative and reproducible. Key approaches include:</p>
+    <ul>
+      <li>Multi-year field experiments under contrasting management</li>
+      <li>Spatial analysis in R (kriging, PCA, geostatistics)</li>
+      <li>Machine learning (e.g., Random Forest) for predictive soil mapping</li>
+      <li>Greenhouse gas monitoring</li>
+      <li>Life Cycle Assessment (openLCA / Brightway)</li>
+      <li>Economic modelling with stochastic simulations</li>
+    </ul>
+    <p><strong>Tools:</strong> R, Python, Git/GitHub, GIS.</p>
+  </section>
+
+  <section id="outputs">
+    <h2>Selected Outputs</h2>
+
+    <h3>Publications</h3>
+    <ul>
+      <li><em>(In prep)</em> Systems-level evaluation of Conservation Agriculture in the UK.</li>
+      <li><em>(In prep)</em> Predicting soil texture using EC and GRS with Random Forest.</li>
+    </ul>
+
+    <h3>Data & Code</h3>
+    <ul>
+      <li><a href="https://github.com/jwollins">GitHub repositories</a></li>
+      <!-- Add links to specific repos here -->
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:YOUR.EMAIL@EXAMPLE.COM">YOUR.EMAIL@EXAMPLE.COM</a></li>
+      <li>GitHub: <a href="https://github.com/jwollins">github.com/jwollins</a></li>
+      <li>Domain: jcollinsagriculture.co.uk</li>
+    </ul>
+  </section>
+
+  <footer>
+    © <span id="y"></span> J Collins • Built with GitHub Pages
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
