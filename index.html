@@ -6,46 +6,25 @@
   <title>J Collins | Academic Profile</title>
   <meta name="description" content="Academic profile of J Collins — Agricultural Systems, Soil Health, Sustainability, and Modelling." />
 
-  
   <style>
-        .profile{
-      display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .avatar{
-      width: 96px;
-      height: 96px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid var(--border);
-    }
-
-    @media (max-width: 520px){
-      .profile{ grid-template-columns: 1fr; }
-      .avatar{ width: 110px; height: 110px; }
-    }
-
     :root{
       --bg: #ffffff;
       --text: #121212;
-      --muted: #555;
+      --muted: #525252;
       --card: #f6f7f8;
       --border: #e6e6e6;
       --accent: #2c5f2d;
       --link: #1a5bd6;
 
       --maxw: 980px;
-      --radius: 14px;
+      --radius: 16px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--bg);
+      background: linear-gradient(#ffffff, #fbfbfb);
       color: var(--text);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
       line-height: 1.65;
@@ -56,16 +35,37 @@
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 56px; }
 
     header {
-      padding: 6px 0 18px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--accent);
+      padding: 14px 0 16px;
       margin-bottom: 22px;
     }
 
+    .hero {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      background: #fff;
+    }
+
     h1 { margin: 0; font-size: clamp(1.8rem, 2.5vw, 2.4rem); letter-spacing: -0.02em; }
-    .tagline { margin: 8px 0 0; color: var(--muted); }
+    .tagline { margin: 6px 0 0; color: var(--muted); }
 
     nav {
-      margin-top: 14px;
+      margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -82,14 +82,23 @@
     }
     nav a:hover { border-color: var(--accent); }
 
-    section { padding-top: 26px; }
-    h2 {
-      margin: 0 0 12px;
-      font-size: 1.35rem;
-      letter-spacing: -0.01em;
+    /* Buttons row (optional links like CV / Scholar / ORCID) */
+    .links{ margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn{
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fff;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
     }
-    h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .btn:hover{ border-color: var(--accent); }
 
+    section { padding-top: 26px; }
+    h2 { margin: 0 0 12px; font-size: 1.35rem; letter-spacing: -0.01em; }
+    h3 { margin: 0 0 10px; font-size: 1.05rem; }
     p { margin: 0 0 12px; }
 
     .card {
@@ -107,12 +116,19 @@
     @media (min-width: 860px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
+    @media (max-width: 560px) {
+      header { position: static; }
+      .hero { grid-template-columns: 1fr; }
+      .avatar { width: 120px; height: 120px; }
+    }
 
     ul { margin: 0 0 12px; padding-left: 20px; }
     li { margin: 6px 0; }
 
     a { color: var(--link); }
     a:hover { text-decoration: none; }
+
+    .accent { color: var(--accent); font-weight: 650; }
 
     /* Publications */
     .pubs { list-style: none; padding-left: 0; margin: 0; }
@@ -129,7 +145,6 @@
     .pubs .doi { display: inline-block; margin-top: 8px; font-size: 0.95rem; }
     .pubs .doi a { word-break: break-all; }
 
-    /* Small footer */
     footer {
       margin-top: 30px;
       padding-top: 16px;
@@ -137,31 +152,44 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
-
-    /* Optional: subtle highlight */
-    .accent { color: var(--accent); font-weight: 600; }
   </style>
 </head>
 
-  <header>
-    <div class="profile">
-      <img class="avatar" src="assets/J Collins Headshot.jpg" alt="Photo of J Collins" />
-      <div>
-        <h1>J Collins</h1>
-        <p class="tagline">Agricultural Systems • Soil Health • Sustainability • Modelling</p>
+<body>
+  <div class="wrap">
 
-        <nav aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#phd">PhD</a>
-          <a href="#research">Research</a>
-          <a href="#methods">Methods</a>
-          <a href="#outputs">Outputs</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <header>
+      <div class="hero">
+        <!-- 1) Add your photo file to: assets/profile.jpg (or change filename below) -->
+        <img class="avatar" src="assets/profile.jpg" alt="Photo of J Collins" />
+
+        <div>
+          <h1>J Collins</h1>
+          <p class="tagline">Agricultural Systems • Soil Health • Sustainability • Modelling</p>
+
+          <nav aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#phd">PhD</a>
+            <a href="#research">Research</a>
+            <a href="#methods">Methods</a>
+            <a href="#outputs">Outputs</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <!-- 2) Optional quick links (edit or delete as you like) -->
+          <div class="links">
+            <!-- Put a PDF in assets/CV.pdf if you want this to work -->
+            <a class="btn" href="assets/CV.pdf">Download CV</a>
+            <!-- Replace these with your real links, or delete -->
+            <a class="btn" href="https://github.com/jwollins">GitHub</a>
+            <!-- Example placeholders:
+            <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
+            <a class="btn" href="https://orcid.org/">ORCID</a>
+            -->
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
-
+    </header>
 
     <section id="about">
       <h2>About</h2>
@@ -262,10 +290,9 @@
       <h3>Publications</h3>
       <ol class="pubs">
         <li>
-          <span class="authors">M. Tsekhmistrenko; <strong>Collins, J.</strong>; H. Bloem; T. Fallah; J. Ritsema; S. Jeffery; and T. Nissen-Meyer,</span>
-          <span class="title">Between two furrows: Soil bulk density from non-invasive seismology.</span>
-          <span class="venue">Environmental Research Communications</span>
-          <span class="doi"><a href="https://iopscience.iop.org/article/10.1088/2515-7620/ae1d27">https://iopscience.iop.org/article/10.1088/2515-7620/ae1d27</a></span>
+          <span class="authors"><em>(In prep)</em></span>
+          <span class="title">Systems-level evaluation of Conservation Agriculture in the UK.</span>
+          <span class="venue">Manuscript in preparation.</span>
         </li>
 
         <li>
@@ -286,7 +313,7 @@
       <h2>Contact</h2>
       <div class="card">
         <ul>
-          <li>Email: <a href="mailto:jcollins@harper-adams.ac.uk">jcollins@harper-adams.ac.uk</a></li>
+          <li>Email: <a href="mailto:YOUR.EMAIL@EXAMPLE.COM">YOUR.EMAIL@EXAMPLE.COM</a></li>
           <li>GitHub: <a href="https://github.com/jwollins">github.com/jwollins</a></li>
           <li>Domain: jcollinsagriculture.co.uk</li>
         </ul>
