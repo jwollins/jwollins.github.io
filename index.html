@@ -152,6 +152,24 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
+
+    .project-row {
+      display: grid;
+      gap: 14px;
+    }
+
+    .side-img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 820px) {
+      .project-row {
+        grid-template-columns: 1.3fr 0.7fr;
+        align-items: start;
+      }
+    }
+
   </style>
 </head>
 
@@ -169,7 +187,7 @@
 
           <nav aria-label="Primary">
             <a href="#about">About</a>
-            <a href="#phd">PhD</a>
+            <a href="#research-projects">Researh Projects</a>
             <a href="#research">Research</a>
             <a href="#methods">Methods</a>
             <a href="#outputs">Outputs</a>
@@ -208,8 +226,8 @@
       </p>
     </section>
 
-    <section id="phd">
-      <h2>PhD Project</h2>
+    <section id="research-projects">
+      <h2>Research Project</h2>
       <div class="card">
         <h3>A Systems-level Evaluation of Conservation Agriculture in the UK</h3>
         <p>
@@ -218,10 +236,13 @@
         </p>
         <ul>
           <li>How do reduced tillage and residue retention affect soil physical, chemical, and biological properties?</li>
+          <li>How does agronomic management differ between treatments?</li>
           <li>What are the implications for greenhouse gas fluxes and carbon storage?</li>
           <li>How do these practices influence farm profitability and risk under variable climate conditions?</li>
         </ul>
       </div>
+        <img class="side-img" src="assets/field_trial.jpg"
+       alt="Field experiment comparing conservation and conventional agriculture" />
     </section>
 
     <section id="research">
